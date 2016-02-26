@@ -23,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.makeKeyAndVisible()
         self.window = window
 
+        UINavigationBar.appearance().barStyle = .Default
+        UINavigationBar.appearance().barTintColor = UIColor.whiteColor()
+        navigationController.navigationBar.translucent = false
+        
         return true
     }
 
