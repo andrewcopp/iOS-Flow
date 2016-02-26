@@ -19,6 +19,7 @@ class ConverseViewController: UIViewController {
         
         let image = UIImage(named: "backButton")
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .Plain, target: self, action: "leftBarButtonItemPressed:")
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.blackColor()
     }
 
     func leftBarButtonItemPressed(sender: UIBarButtonItem) {
