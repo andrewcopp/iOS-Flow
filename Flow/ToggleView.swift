@@ -36,7 +36,15 @@ class ToggleView: UIView, SwipeControl {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func selectIndex(index: Int) {
+    func setIndexState(index: CGFloat) {
+        if index < 0.5 {
+            segmentedControl.selectedSegmentIndex = 0
+        } else {
+            segmentedControl.selectedSegmentIndex = 1
+        }
+    }
+    
+    func setSelectedIndex(index: Int) {
         segmentedControl.selectedSegmentIndex = index
     }
     

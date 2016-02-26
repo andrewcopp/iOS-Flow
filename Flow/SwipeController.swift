@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SwipeController: UIViewController, SwipeControlDelegate {
+class SwipeController: UIViewController, UIScrollViewDelegate, SwipeControlDelegate {
     
     private var _scrollView: UIScrollView!
     var viewControllers: [UIViewController]? {
@@ -22,6 +22,9 @@ class SwipeController: UIViewController, SwipeControlDelegate {
     var swipeControl: SwipeControl? {
         didSet {
             swipeControl?.delegate = self
+            
+            let index = _scrollView.contentOffset.x / (_scrollView.contentSize.width / CGFloat(viewControllers!.count))
+            swipeControl?.setIndexState(index)
         }
     }
 
@@ -29,6 +32,7 @@ class SwipeController: UIViewController, SwipeControlDelegate {
         super.viewDidLoad()
         
         _scrollView = AutoresizingScrollView()
+        _scrollView.delegate = self
         
         _scrollView.pagingEnabled = true
         _scrollView.showsHorizontalScrollIndicator = false
@@ -76,6 +80,13 @@ class SwipeController: UIViewController, SwipeControlDelegate {
         } else {
             _scrollView.contentSize = view.bounds.size
         }
+    }
+    
+    // MARK: UIScrollViewDelegate
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let index = scrollView.contentOffset.x / (scrollView.contentSize.width / CGFloat(viewControllers!.count))
+        swipeControl?.setIndexState(index)
     }
     
     // MARK: SwipeControlDelegate

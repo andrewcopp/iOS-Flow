@@ -9,7 +9,9 @@
 import UIKit
 
 protocol SwipeControl {
-    weak var delegate: SwipeControlDelegate? { get set }    
+    weak var delegate: SwipeControlDelegate? { get set }
+    
+    func setIndexState(index: CGFloat)
 }
 
 protocol SwipeControlDelegate: class {
