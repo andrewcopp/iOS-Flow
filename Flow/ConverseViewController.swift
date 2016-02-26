@@ -15,7 +15,7 @@ class ConverseViewController: UIViewController {
 
         view.backgroundColor = UIColor.yellowColor()
         
-        configureCustomBackButton()
+        configureCustomBackBarButton()
     }
     
 }

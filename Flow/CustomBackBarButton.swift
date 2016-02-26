@@ -1,5 +1,5 @@
 //
-//  CustomBackButton.swift
+//  CustomBackBarButton.swift
 //  Flow
 //
 //  Created by Andrew Copp on 2/26/16.
@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     
-    func configureCustomBackButton() {
+    func configureCustomBackBarButton() {
         navigationItem.hidesBackButton = true
         
         let backButtonImage = UIImage(named: "backButton")
