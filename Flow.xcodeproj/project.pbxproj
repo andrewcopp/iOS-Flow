@@ -18,6 +18,7 @@
 		57DC193F1C7F9B6700A4BCE1 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC193E1C7F9B6700A4BCE1 /* UserViewController.swift */; };
 		57DC19411C7F9DAD00A4BCE1 /* ConverseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC19401C7F9DAD00A4BCE1 /* ConverseViewController.swift */; };
 		57DC19451C7FBE4300A4BCE1 /* AutoresizingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC19441C7FBE4300A4BCE1 /* AutoresizingScrollView.swift */; };
+		57EC00FB1C809C9A00359824 /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC00FA1C809C9A00359824 /* CustomBackButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		57DC193E1C7F9B6700A4BCE1 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		57DC19401C7F9DAD00A4BCE1 /* ConverseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverseViewController.swift; sourceTree = "<group>"; };
 		57DC19441C7FBE4300A4BCE1 /* AutoresizingScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoresizingScrollView.swift; sourceTree = "<group>"; };
+		57EC00FA1C809C9A00359824 /* CustomBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				57DC19441C7FBE4300A4BCE1 /* AutoresizingScrollView.swift */,
 				5753FE521C7FCD670075CE3B /* SwipeControl.swift */,
 				5753FE541C7FCE660075CE3B /* ToggleView.swift */,
+				57EC00FA1C809C9A00359824 /* CustomBackButton.swift */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57DC19411C7F9DAD00A4BCE1 /* ConverseViewController.swift in Sources */,
+				57EC00FB1C809C9A00359824 /* CustomBackButton.swift in Sources */,
 				57DC19331C7F791100A4BCE1 /* AuthenticateViewController.swift in Sources */,
 				57DC193F1C7F9B6700A4BCE1 /* UserViewController.swift in Sources */,
 				57DC19391C7F871E00A4BCE1 /* SwipeController.swift in Sources */,
