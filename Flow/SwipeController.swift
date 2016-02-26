@@ -23,8 +23,8 @@ class SwipeController: UIViewController, UIScrollViewDelegate, SwipeControlDeleg
         didSet {
             swipeControl?.delegate = self
             
-            let index = _scrollView.contentOffset.x / (_scrollView.contentSize.width / CGFloat(viewControllers!.count))
-            swipeControl?.setIndexState(index)
+            let swipeState = calculateSwipeState()
+            swipeControl?.setIndexState(swipeState)
         }
     }
 
@@ -82,11 +82,15 @@ class SwipeController: UIViewController, UIScrollViewDelegate, SwipeControlDeleg
         }
     }
     
+    private func calculateSwipeState() -> CGFloat {
+        return _scrollView.contentOffset.x / (_scrollView.contentSize.width / CGFloat(viewControllers!.count))
+    }
+    
     // MARK: UIScrollViewDelegate
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        let index = scrollView.contentOffset.x / (scrollView.contentSize.width / CGFloat(viewControllers!.count))
-        swipeControl?.setIndexState(index)
+        let swipeState = calculateSwipeState()
+        swipeControl?.setIndexState(swipeState)
     }
     
     // MARK: SwipeControlDelegate
